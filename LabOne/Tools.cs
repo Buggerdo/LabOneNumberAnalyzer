@@ -67,7 +67,7 @@ namespace LabOne
                 {
                     WriteLine("less than 25.");
                 }
-                else if(number > 25 && number < 60)
+                else if(number > 25 && number <= 60)
                 {
                     WriteLine("between 26 and 60 inclusive.");
                 }

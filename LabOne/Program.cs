@@ -9,8 +9,8 @@ namespace LabOne
         {
             string name = Tools.GetName();
 
-            NumberAnalyzer player = new NumberAnalyzer(name);
-
+            _ = new NumberAnalyzer(name);
+            
             Tools.Exit(name);
         }
 

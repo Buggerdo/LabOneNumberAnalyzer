@@ -6,7 +6,6 @@ namespace LabOne
     {
         public NumberAnalyzer(string name)
         {
-
             do
             {
                 int number = Tools.GetNumber(name);

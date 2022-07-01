@@ -66,13 +66,13 @@ namespace LabOne
                 if(number >= 2 && number < 25)
                 {
                     WriteLine("less than 25.");
-                }
+                }              
                 else if(number > 25 && number <= 60)
-                {
+                {              
                     WriteLine("between 26 and 60 inclusive.");
-                }
+                }              
                 else if(number >= 60)
-                {
+                {              
                     WriteLine("greater than 60.");
                 }
             }
@@ -96,11 +96,28 @@ namespace LabOne
         /// <returns>True if user wants to continue</returns>
         public static bool TryAgain()
         {
-            Write("Would you like to try again Y/N ?");
-            string oneMore = ReadLine().ToLower().Trim();
-
-            return oneMore == "yes" || oneMore == "y";
-
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey();
+            do
+            {
+                Console.Clear();
+                Console.Write("Would you like to continue (Y/N)? ");
+                string awnser = Console.ReadLine().ToLower().Trim();
+                Console.Clear();
+                if(awnser == "y" || awnser == "yes" || awnser == "yup")
+                {
+                    return true;
+                }
+                else if(awnser == "n" || awnser == "no" || awnser == "nope")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("Sorry that is not a valid answer");
+                    Thread.Sleep(2000);
+                }
+            } while(true);
         }
 
         /// <summary>
